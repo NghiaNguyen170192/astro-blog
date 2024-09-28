@@ -1,9 +1,8 @@
 site:
-  name: AstroWind
+  name: NQTN
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
-
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
@@ -34,7 +33,7 @@ i18n:
 apps:
   blog:
     isEnabled: true
-    postsPerPage: 6
+    postsPerPage: 10
 
     post:
       isEnabled: true
@@ -58,7 +57,7 @@ apps:
       isEnabled: true
       pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
       robots:
-        index: false
+        index: true
 
     isRelatedPostsEnabled: true
     relatedPostsCount: 4
@@ -70,3 +69,8 @@ analytics:
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+
+personal:
+  linkedin: 'https://www.linkedin.com/in/nghianguyen170192'
+  github: 'https://github.com/NghiaNguyen170192'
+  facebook: 'https://www.facebook.com/nghia.nguyen170192'

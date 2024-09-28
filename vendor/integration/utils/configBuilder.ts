@@ -11,6 +11,7 @@ export type Config = {
   };
   ui?: unknown;
   analytics?: unknown;
+  personal?: PersonalConfig;
 };
 
 export interface SiteConfig {
@@ -80,6 +81,11 @@ export interface AnalyticsConfig {
 
 export interface UIConfig {
   theme: string;
+}
+
+export interface PersonalConfig {
+  linkedin: string;
+  github: string;
 }
 
 const DEFAULT_SITE_NAME = 'Website';
@@ -193,6 +199,16 @@ const getAnalytics = (config: Config) => {
   return merge({}, _default, config?.analytics ?? {}) as AnalyticsConfig;
 };
 
+const getPersonalConfig = (config: Config) => {
+  const _default = {
+    linkedin: 'aaaaaa',
+    github: 'bbbbb',
+    facebook: '',
+  };
+
+  return merge({}, _default, config?.personal ?? {}) as PersonalConfig;
+};
+
 export default (config: Config) => ({
   SITE: getSite(config),
   I18N: getI18N(config),
@@ -200,4 +216,5 @@ export default (config: Config) => ({
   APP_BLOG: getAppBlog(config),
   UI: getUI(config),
   ANALYTICS: getAnalytics(config),
+  PERSONAL: getPersonalConfig(config),
 });

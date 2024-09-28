@@ -269,7 +269,23 @@
         }
       },
       "required": ["theme"]
+    },
+    "personal": {
+      "type": "object",
+      "properties": {
+        "linkedin": {
+          "type": "string"
+        },
+        "github": {
+          "type": "string"
+        },
+        "facebook": {
+          "type": "string"
+        }
+      },
+      "required": ["linkedin", "github", "facebook"],
+      "additionalProperties": false
     }
   },
-  "required": ["site", "metadata", "i18n", "apps", "analytics", "ui"]
+  "required": ["site", "metadata", "i18n", "apps", "analytics", "ui", "personal"]
 }

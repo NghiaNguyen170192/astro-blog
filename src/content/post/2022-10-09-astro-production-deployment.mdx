@@ -1,0 +1,63 @@
+---
+title: 'Astro Production Deployment'
+description: 'How to deploy Astro to Production'
+author: 'Nghia Nguyen'
+publishDate: 2022-10-09
+categories: 'deployment'
+tags:
+  - azure
+  - astro
+  - pwa
+  - deployment
+  - netlify
+---
+
+This is a tutorial to deploy _Astro_ static web app to [Azure](https://portal.azure.com/).
+
+### Setup Astro repo
+
+Please follow the [Astro Installation guide](https://portal.azure.com/) with [GitHub](https://github.com/) repo enabled
+
+### Setup Domain name
+
+You can buy any domain with cheap price from [Godaddy](https://www.godaddy.com/).
+
+### Deploy your Astro repository to Production
+
+After setting up your Astro repository on GitHub, you are ready to the repository to Production
+There are several ways to deploy Astro. I only mention two ways, which are [Netlify](https://app.netlify.com/) and [Azure](https://portal.azure.com/).
+
+#### Deploy to Netlify
+
+Astro already has integration to deploy static web app to Netlify.
+Here is the [deployment guide](https://docs.astro.build/en/guides/integrations-guide/netlify/)
+
+##### Add custom domain name in Netlify
+
+Netlify provides default domain name with _site-name.netlify.app_
+If you want to add your custom domain, you follow these steps.
+
+1. Go to [Netlify](https://app.netlify.com/)
+2. Open _Domain Management_ tab
+3. Click _Add Custom Domain_
+4. Enter your custom domain, click _Verify_
+
+#### Deploy to Azure
+
+Here are steps to deploy to Azure.
+
+1. Go to [Azure Portal](https://portal.azure.com/)
+2. Click _App Services_
+3. Click _Create_
+4. Under _Publish_, choose _Static Web App_
+5. Enter _Name_
+6. Under _Deployment Details_, choose _GitHub_
+7. For _Hosting Plan_, choose _Free: For hobby or personal projects_
+8. Link your _Organization_ , _Repository_ and _Branch_
+9. Then click _Create_
+
+![deploy to azure](/src/assets/images/deploy-to-azure.png)
+
+It will create a deployment _.yml_ file under _.github/workflows_
+
+Then navigate to _Actions_ in your _GitHub repo_. Once the workflow runs successfully, you can check your blog is published publicly to the Internet.
