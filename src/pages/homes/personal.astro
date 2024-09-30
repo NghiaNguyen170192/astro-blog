@@ -11,13 +11,15 @@ import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 
+import { PERSONAL } from 'astrowind:config';
+
 const metadata = {
   title: 'Personal Homepage Demo',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
+  <!-- <Fragment slot="announcement"></Fragment>
   <Fragment slot="header">
     <Header
       links={[
@@ -26,7 +28,7 @@ const metadata = {
         { text: 'Resume', href: '#resume' },
         { text: 'Porfolio', href: '#porfolio' },
         { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/onwidget' },
+        { text: 'Github', href: PERSONAL?.github },
       ]}
       actions={[
         {
@@ -37,51 +39,37 @@ const metadata = {
       isSticky
       showToggleTheme
     />
-  </Fragment>
-
-  <!-- Hero2 Widget ******************* -->
+  </Fragment> -->
 
   <Hero
     id="hero"
-    title="Sarah Johnson"
+    title="Nghĩa Nguyễn"
     tagline="Personal Web Demo"
     actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
-      New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into captivating
-      realities.
+      I'm a developer passionate about web and software development. 
     </Fragment>
   </Hero>
-
-  <!-- Content Widget **************** -->
 
   <Content
     id="about"
     columns={3}
     items={[
       {
-        icon: 'tabler:brand-dribbble',
+        icon: 'tabler:brand-linkedin',
         callToAction: {
           target: '_blank',
-          text: 'Dribbble',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:brand-behance',
-        callToAction: {
-          target: '_blank',
-          text: 'Behance',
-          href: '#',
+          text: 'Linkedin',
+          href: PERSONAL?.linkedin,
         },
       },
       {
         icon: 'tabler:brand-pinterest',
         callToAction: {
           target: '_blank',
-          text: 'Pinterest',
-          href: '#',
+          text: 'Github',
+          href: PERSONAL?.github,
         },
       },
     ]}
@@ -111,8 +99,6 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
-
   <Steps
     id="resume"
     title="Work experience"
@@ -133,8 +119,6 @@ const metadata = {
     classes={{ container: 'max-w-3xl' }}
   />
 
-  <!-- Steps Widget ****************** -->
-
   <Steps
     id="resume"
     title="Education"
@@ -150,8 +134,6 @@ const metadata = {
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
-
-  <!-- Features3 Widget ************** -->
 
   <Features3
     title="Skills"
@@ -198,8 +180,6 @@ const metadata = {
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
   <Content
     id="porfolio"
     title="Elevating visual narratives"
@@ -239,8 +219,6 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
   <Content
     isReversed
     isAfterContent={true}
@@ -277,8 +255,6 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
   <Content
     isReversed
     isAfterContent={true}
@@ -313,8 +289,6 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Testimonials Widget *********** -->
 
   <Testimonials
     title="Client testimonials"
@@ -377,8 +351,6 @@ const metadata = {
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
-
   <CallToAction
     title="Let's create together"
     subtitle="Ready to transform your vision into captivating designs?"
@@ -390,8 +362,6 @@ const metadata = {
       },
     ]}
   />
-
-  <!-- BlogLatestPost Widget **************** -->
 
   <BlogLatestPosts
     id="blog"
