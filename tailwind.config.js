@@ -17,6 +17,19 @@ module.exports = {
         serif: ['var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            'code::before': {
+              content: '', // don’t generate the pseudo-element
+              //                content: '""', // this is an alternative: generate pseudo element using an empty string
+            },
+            'code::after': {
+              content: 'none'
+            },
+          }
+        }
+      }
     },
   },
   plugins: [typographyPlugin],
