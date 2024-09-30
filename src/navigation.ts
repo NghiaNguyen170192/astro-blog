@@ -92,25 +92,17 @@ export const headerData = {
       text: 'Blog',
       links: [
         {
-          text: 'Blog List',
+          text: 'All Blogs',
           href: getBlogPermalink(),
         },
         {
-          text: 'Categories',
-          href: getPermalink('tutorials', 'category'),
+          text: 'Power Platform Blogs',
+          href: getPermalink('power-platform', 'tag'),
         },
         {
-          text: 'Tags',
-          href: getPermalink('astro', 'tag'),
-        },
-        // {
-        //   text: 'Article (with MDX)',
-        //   href: getPermalink('markdown-elements-demo-post', 'post'),
-        // },
-        // {
-        //   text: 'Articles',
-        //   href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        // },
+          text: '.Net Core Blogs',
+          href: getPermalink('netcore', 'tag'),
+        }
       ],
     },
     // {

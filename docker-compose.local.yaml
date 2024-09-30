@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  blog:
+    restart: on-failure
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    hostname: blog
+    ports:
+      - '8080:8080'
