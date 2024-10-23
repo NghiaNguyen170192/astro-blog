@@ -133,6 +133,8 @@ export interface Stat {
 }
 
 export interface Item {
+  companyName?: string;
+  duration?: string;
   title?: string;
   description?: string;
   icon?: string;
@@ -265,6 +267,8 @@ export interface Faqs extends Omit<Headline, "classes">, Widget {
 export interface Steps extends Omit<Headline, "classes">, Widget {
   items: Array<{
     title: string;
+    companyName: string;
+    duration: string;
     description?: string;
     icon?: string;
     classes?: Record<string, string>;

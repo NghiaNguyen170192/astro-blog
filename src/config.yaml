@@ -8,16 +8,16 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
+    default: NQTN
     template: "%s — AstroWind"
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: ""
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: NQTN
     images:
-      - url: "~/assets/images/default.png"
+      - url: "~/assets/images/hero-image.png"
         width: 1200
         height: 628
     type: website
@@ -33,7 +33,7 @@ i18n:
 apps:
   blog:
     isEnabled: true
-    postsPerPage: 10
+    postsPerPage: 5
 
     post:
       isEnabled: true

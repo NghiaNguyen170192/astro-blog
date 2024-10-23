@@ -6,7 +6,7 @@ export const headerData = {
   links: [
     {
       text: "Homes",
-      // href: getPermalink(),
+      href: getPermalink(""),
       links: [
         // {
         //   text: 'SaaS',
@@ -29,6 +29,24 @@ export const headerData = {
     {
       text: "About",
       href: getPermalink("about"),
+    },
+    
+    {
+      text: "Blog",
+      links: [
+        {
+          text: "All Blogs",
+          href: getBlogPermalink(),
+        },
+        {
+          text: "Power Platform",
+          href: getPermalink("power-platform", "tag"),
+        },
+        {
+          text: ".Net Core",
+          href: getPermalink("netcore", "tag"),
+        },
+      ],
     },
     // {
     //   text: 'Pages',
@@ -92,23 +110,6 @@ export const headerData = {
     //     },
     //   ],
     // },
-    {
-      text: "Blog",
-      links: [
-        {
-          text: "All Blogs",
-          href: getBlogPermalink(),
-        },
-        {
-          text: "Power Platform",
-          href: getPermalink("power-platform", "tag"),
-        },
-        {
-          text: ".Net Core",
-          href: getPermalink("netcore", "tag"),
-        },
-      ],
-    },
     // {
     //   text: 'Widgets',
     //   href: getPermalink(),

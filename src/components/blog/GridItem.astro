@@ -36,20 +36,22 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
               decoding="async"
             />
           </a>
-        ) : (
-          <Image
-            src={image}
-            class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-            widths={[400, 900]}
-            width={400}
-            sizes="(max-width: 900px) 400px, 900px"
-            alt={post.title}
-            aspectRatio="16:9"
-            layout="cover"
-            loading="lazy"
-            decoding="async"
-          />
-        ))
+        ) : ("")
+        // (
+        //   <Image
+        //     src={image}
+        //     class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+        //     widths={[400, 900]}
+        //     width={400}
+        //     sizes="(max-width: 900px) 400px, 900px"
+        //     alt={post.title}
+        //     aspectRatio="16:9"
+        //     layout="cover"
+        //     loading="lazy"
+        //     decoding="async"
+        //   />
+        // )
+      )
     }
   </div>
 

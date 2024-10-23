@@ -1,24 +1,62 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/PageLayout.astro";
 
-// import Hero from '~/components/widgets/Hero.astro';
-// import Note from '~/components/widgets/Note.astro';
-// import Features from '~/components/widgets/Features.astro';
-// import Features2 from '~/components/widgets/Features2.astro';
-// import Steps from '~/components/widgets/Steps.astro';
-// import Content from '~/components/widgets/Content.astro';
-// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-// import FAQs from '~/components/widgets/FAQs.astro';
-// import Stats from '~/components/widgets/Stats.astro';
-// import CallToAction from '~/components/widgets/CallToAction.astro';
+import Hero from "~/components/widgets/Hero.astro";
+import Content from "~/components/widgets/Content.astro";
+import Skill from "~/components/widgets/Skill.astro";
+import { PERSONAL } from "astrowind:config";
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: "Home",
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
+  <Hero id="hero" title="Nguyễn Quốc Trọng Nghĩa">
+    <Fragment slot="subtitle"> I'm a developer passionate about web and software development. </Fragment>
+  </Hero>
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: "tabler:brand-linkedin",
+        callToAction: {
+          target: "_blank",
+          text: "Linkedin",
+          href: PERSONAL?.linkedin,
+        },
+      },
+      {
+        icon: "tabler:brand-pinterest",
+        callToAction: {
+          target: "_blank",
+          text: "Github",
+          href: PERSONAL?.github,
+        },
+      },
+    ]}
+    image={{
+      src: "~/assets/images/portrait-small.jpg",
+      alt: "Colorful Image",
+      loading: "eager",
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <span>Programming Languages: C#, ASP.NET, .NET Core</span><br />
+      <span>Frontend: Bootstrap, Astro</span><br />
+      <span>Database: Microsoft SQL Server, PostgreSQL</span><br />
+      <span>Tools: Visual Studio, SQL Server Management Tool, VSCode, Terminal</span><br />
+      <span>Source version control tools: Git, Team Foundation Server (TFS), SVN Software Development Process: Scrum, Agile, Kanban </span><br />
+      <span>Platform: Dynamics CRM 2011, 2016, D365, PowerApps, PowerAutomate, Azure, SharePoint</span><br />
+      <span>Communication: English proficiently</span><br />
+      <span>Others: Teamwork, critical thinking, time management, problems solving.</span><br />
+    </Fragment>
+  </Content>
+  
   <!-- Hero Widget ******************* -->
   <!-- 
   <Hero
