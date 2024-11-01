@@ -1,0 +1,72 @@
+---
+title: 'Power Apps - Business Process Flows'
+description: 'Power Apps - Business Process Flows'
+excerpt: Power Apps - Business Process Flows
+author: 'Nghia Nguyen'
+publishDate: 2024-01-01
+tags:
+  - 'power apps'
+  - 'power platform'
+  - 'business process flow'
+  - 'bpf'
+categories: 'Power Platform'
+---
+
+
+This first post will look at Business Process flows.
+
+The new features include;
+
+*   Concurrent business process flows
+*   Abandon business process flows
+*   New style business process flow designer
+*   Ability to call workflows from business process flows
+
+### Concurrent Business Process Flows
+
+  
+First off, you can now have concurrent business process flows and swap between them. This could be really useful if you want to have two process active at the same time. By way of an example I have looked at having the phone to case business process flow running at the same time. As a user doing this is really simple, or you need to do is use the switch process option. (As shown below)
+
+![test](https://neilparkhurst.files.wordpress.com/2016/11/110616_1729_dynamics3651.png)
+
+Then you can select any appropriate process. Previously changing to a new process meant the first one was halted and a new one created. But now you can swap between them and the system retains the current position.
+
+![test](https://neilparkhurst.files.wordpress.com/2016/11/110616_1729_dynamics3652.png)
+
+Notice the option “Archived processes”. Once a process is finished or abandoned if can be found here.
+
+![test](https://neilparkhurst.files.wordpress.com/2016/11/110616_1729_dynamics3653.png)
+
+****Abandoning Processes****  
+As just mentioned, it is now possible to abandon a process. Meaning you can halt a process at any point. This might be useful in lots of circumstances. I can image, for example, wanting to abandon a lead qualification process at any stage in the business process flow.
+
+![test](https://neilparkhurst.files.wordpress.com/2016/11/110616_1729_dynamics3654.png)
+
+Once abandoned the business process flow is literally greyed out, as shown below.
+
+![test](https://neilparkhurst.files.wordpress.com/2016/11/110616_1729_dynamics3655.png)
+
+Abandoned processes are include in the archived processes option, just as with finished ones.
+
+![test](https://neilparkhurst.files.wordpress.com/2016/11/110616_1729_dynamics3656.png)
+
+****New Style Business Process Flow Designer****  
+The designer for business processed has been upgraded to be much more graphical. As you can see below the flow is now drawn in a chart like view, this is particularly useful when your business process is complex and contains conditional branches.
+
+![test](https://neilparkhurst.files.wordpress.com/2016/11/110616_1729_dynamics3657.png)
+
+The concept of stages and steps (or fields) within each stage remains the same. Clicking on the details option will show the steps for each stage. The properties that relate to each of the steps, such is if it is mandatory or not is shown in a tab on the right hand side of the screen.
+
+![test](https://neilparkhurst.files.wordpress.com/2016/11/110616_1729_dynamics3658.png)
+
+Hopefully you will find this new interface to be very intuitive, it should take no time at all to get up and running with it.
+
+****Ability to Call Workflows From Business Process Flows****
+
+You may have already spotted the workflows option in the screen shot above. This is a great new feature. It is quite common for me to create workflows that do “stuff” as stages are completed. For example, recently for a customer I automatically created an appointment activity when a sales visit reached a certain stage in its business process flow. Doing this currently isn’t difficult but it isn’t always each to see the relationship between workflows and business process flows.
+
+![test](https://neilparkhurst.files.wordpress.com/2016/11/110616_1729_dynamics3659.png)
+
+You can see above the using the add option gives you the ability to add workflows into the business process flow. Once added you can opt if the workflow should be triggered on stage entry or stage exit. The workflow you select will need to be related to the entity for the business process flow and must be active to show in the selection. Plus it will need to be flagged as an on demand workflow.
+
+![test](https://neilparkhurst.files.wordpress.com/2016/11/110616_1729_dynamics36510.png)
